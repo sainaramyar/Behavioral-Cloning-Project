@@ -1,0 +1,9 @@
+TIPS FOR P3
+
+    - For every image, crop it, normalize it and resize it.
+    - Exclude something like 70% of the data that has angles near to zero, maybe steerings <= 0.85. We have a lot of data going straight, so the model will have bias associated with going straight.
+    - Duplicate all the data, mirroring the image and the steering angle, this way you will have double # of images.
+    - Run the sim in training mode and record a lot of data in the points that your car is getting out of the track.
+    - Record data going in the opposite direction too…
+    - You can try the Nvidia architecture
+    - I trained my model for hundred of epochs, but not every time. After training, I was saving the weights and after I recorded more data, I preloaded the weights so that the learning would run faster… I did it a few times, and it worked!
